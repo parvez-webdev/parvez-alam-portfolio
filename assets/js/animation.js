@@ -3,6 +3,7 @@ const typed = new Typed('#typed', {
         'Full Stack Web Developer',
         'Problem Solver',
         'PHP & Laravel Developer'
+        
     ],
     typeSpeed: 70,
     backSpeed: 40,
