@@ -435,36 +435,6 @@ body{
   0% { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(14px); }
 }
-/* Responsive */
-
-@media (max-width: 991px) {
-    .profile-frame {
-        max-width: 350px;
-        height: 430px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-image {
-        padding: 25px;
-    }
-
-    .profile-frame {
-        max-width: 290px;
-        height: 360px;
-    }
-}
-
-/* Reduced Motion Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-    .profile-frame::before,
-    .profile-frame::after {
-        animation: none;
-    }
-}
-
-
 /* about-section */
 #about .about-image {
   max-width: 400px;
