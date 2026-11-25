@@ -1,9 +1,4 @@
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   Parvez Alam Portfolio
-========================================== */
-
 /* Global Responsive Fix */
 html {
     scroll-behavior: smooth;
@@ -30,7 +25,6 @@ img {
 /* ==========================================
    LARGE TABLET / SMALL LAPTOP
 ========================================== */
-
 @media (max-width: 1199px) {
 
     .container {
@@ -593,6 +587,12 @@ img {
     .about-stats {
         gap: 5px;
     }
+    #contact {
+        padding: 0px 0 80px;
+    }
+    .contact-form {
+        margin-left: 0;
+    }
 }
 
 /* ==========================================
@@ -610,3 +610,4 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+

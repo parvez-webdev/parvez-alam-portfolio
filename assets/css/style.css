@@ -138,7 +138,6 @@ body{
     color: var(--bg-color);
     box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
 }
-
 /* ==============================
    HERO SECTION
 ================================= */
@@ -285,118 +284,95 @@ body{
   50% { transform: translateY(-12px); }
 }
 
-/* RGB Animated Border */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 
 .profile-frame::before {
-    content: "";
-    position: absolute;
-    inset: -3px;
-    border-radius: 25px;
-
-    background: conic-gradient(
-        from 0deg,
-        #00d4ff,
-        #0066ff,
-        #a855f7,
-        #ff00aa,
-        #00d4ff
-    );
-
-    animation: rgbRotate 4s linear infinite;
-    z-index: -1;
-
-    filter: blur(2px);
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: conic-gradient(
+  from var(--angle),
+    rgba(34, 211, 238, 0.15) 0%,
+    rgba(34, 211, 238, 0.15) 60%,
+    #08b2b2 80%,
+    #22d3ee 100%
+  );
+  animation: spinBorder 4s linear infinite;
+  z-index: -1;
 }
 
-/* RGB Glow Light */
-
-.profile-frame::after {
-    content: "";
-    position: absolute;
-    inset: -8px;
-    border-radius: 28px;
-
-    background: conic-gradient(
-        from 0deg,
-        #00d4ff,
-        #0066ff,
-        #a855f7,
-        #ff00aa,
-        #00d4ff
-    );
-
-    animation: rgbRotate 4s linear infinite;
-    filter: blur(25px);
-    opacity: 0.55;
-    z-index: -2;
+@keyframes spinBorder {
+  to { --angle: 360deg; }
 }
-
-/* Profile Image */
-
 .profile-frame img {
-    width: 100%;
-    height: 100%;
-    display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
 
-    object-fit: cover;
-    object-position: center top;
+  object-fit: cover;
+  object-position: center top;
 
-    border-radius: 19px;
-    position: relative;
-    z-index: 1;
+  border-radius: 19px;
+  position: relative;
+  z-index: 1;
 }
 
 .social-links {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 25px;
 }
 
 .social-icon {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(0, 229, 255, 0.5);
-    border-radius: 50%;
-    background: var(--bg-dark);
-    font-size: 25px;
-    text-decoration: none;
-    transition: 0.3s ease;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 229, 255, 0.5);
+  border-radius: 50%;
+  background: var(--bg-dark);
+  font-size: 25px;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 /* Brand Colors */
 .github {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .linkedin {
-    color: #0A66C2;
+  color: #0A66C2;
 }
 
 .whatsapp {
-    color: #25D366;
+  color: #25D366;
 }
 
 .facebook {
-    color: #1877F2;
+  color: #1877F2;
 }
 
 .instagram {
-    color: #E4405F;
+  color: #E4405F;
 }
 
 .email {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Hover Effect */
 .social-icon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px currentColor;
-    border-color: currentColor;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px currentColor;
+  border-color: currentColor;
 }
 
 
@@ -405,13 +381,13 @@ body{
 /* RGB Animation */
 
 @keyframes rgbRotate {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+      transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 .scroll-down {
@@ -620,6 +596,7 @@ body{
 .icon-cyan {
   color: var(--primary-color);
 }
+
 /* Projects Section */
 #projects {
   padding: 60px 0 80px;
@@ -782,4 +759,226 @@ body{
 
 .project-img img {
   object-position: top;
+}
+/* Contact Section */
+#contact {
+  padding: 60px 0 80px;
+}
+
+#contact h1 {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+
+#contact h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+#contact .section-subtitle {
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0 auto 40px;
+}
+.contact-intro {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: #fff;
+}
+
+.contact-info i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.contact-social {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-social a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  transition: all 0.25s ease;
+}
+
+.contact-social a:hover {
+  color: #0b1220;
+  background: var(--primary-color);
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.55);
+}
+.contact-item:hover {
+  color: #fff;
+  transform: translateX(6px);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25);
+}
+
+.contact-item small {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  border-radius: 12px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+}
+.form-title {
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 0;
+  color: #fff;
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0;
+  outline: none;
+  resize: none;
+  transition: border-color 0.25s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(203, 213, 225, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color: var(--primary-color);
+  box-shadow: 0 1px 0 var(--primary-color);
+}
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-weight: 600;
+  color: #0b1220;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary-color);
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.btn-send:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.55);
+}
+/* Sleek form */
+.contact-form {
+  padding: 32px;
+  margin-left: 30%;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(34, 211, 238, 0.08);
+}
+
+.form-title {
+  font-size: 1.3rem;
+  margin-bottom: 28px;
+}
+
+.contact-form label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  max-height: 260px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(34, 211, 238, 0.05);
+  border-bottom-color: var(--primary-color);
+  box-shadow: 0 1px 0 var(--primary-color);
+}
+.btn-send {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 28px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+}
+
+.btn-send i {
+  transition: transform 0.25s ease;
+}
+
+.btn-send:hover i {
+  transform: translateX(5px);
 }

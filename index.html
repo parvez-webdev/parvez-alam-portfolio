@@ -44,9 +44,7 @@
                     </ul>
                 </div>
                 <div>
-                    <button class="btn">Let's Talk 
-           
-                    </button>
+                    <a href="#contact" class="btn btn-lines">Let's Talk</a>
                 </div>
             </div>
         </nav>
@@ -107,12 +105,6 @@
                             rel="noopener noreferrer" 
                             class="social-icon facebook">
                                 <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/parvez.web/" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                class="social-icon instagram">
-                                <i class="fa-brands fa-instagram"></i>
                             </a>
                             <a href="mailto:parvezalam.web@gmail.com" 
                                 aria-label="Email" 
@@ -337,61 +329,50 @@
             <div class="container">
                 <h1>Get In Touch</h1>
                 <p class="section-subtitle">Have a project in mind? Let's talk about how I can help.</p>
-        
                 <div class="row g-4">
-        
                     <div class="col-lg-5">
-                        <div class="contact-list">
-        
-                            <a href="mailto:kaziparvez7452@gmail.com" class="contact-item">
-                                <span class="contact-icon"><i class="bi bi-envelope"></i></span>
-                                <span>
-                                    <small>Email</small>
-                                    kaziparvez7452@gmail.com
-                                </span>
+                        <p class="contact-intro">
+                            Let's collaborate! I'm always open to discussing new projects and opportunities.
+                        </p>
+                    
+                        <ul class="contact-info">
+                            <a href="mailto:parvezalam.web@gmail.com" target="_blank" aria-label="Email">
+                                <li><i class="bi bi-envelope-fill"></i> kaziparvez7452@gmail.com</li>
                             </a>
-        
-                            <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener" class="contact-item">
-                                <span class="contact-icon"><i class="bi bi-whatsapp"></i></span>
-                                <span>
-                                    <small>WhatsApp</small>
-                                    Message me directly
-                                </span>
+                            <!-- <a href="https://www.fiverr.com/parvezalambd" target="_blank" rel="noopener" aria-label="Fiverr">
+                                <li><i class="bi bi-briefcase-fill"></i> Fiverr: parvezalambd</li>
+                            </a> -->
+                            <li><i class="bi bi-geo-alt-fill"></i> Chattogram, Bangladesh</li>
+                        </ul>
+                    
+                        <div class="contact-social">
+                            <a href="https://github.com/parvez-webdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/parvez-alam-071b273ba" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://wa.me/8801619027451" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                                class="bi bi-whatsapp"></i>
                             </a>
-        
-                            <a href="https://www.fiverr.com/parvezalambd" target="_blank" rel="noopener" class="contact-item">
-                                <span class="contact-icon"><i class="bi bi-briefcase"></i></span>
-                                <span>
-                                    <small>Fiverr</small>
-                                    parvezalambd
-                                </span>
-                            </a>
-        
-                            <a href="#" target="_blank" rel="noopener" class="contact-item">
-                                <span class="contact-icon"><i class="bi bi-linkedin"></i></span>
-                                <span>
-                                    <small>LinkedIn</small>
-                                    Connect with me
-                                </span>
-                            </a>
-        
                         </div>
                     </div>
-        
                     <div class="col-lg-7">
                         <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                            <div class="row g-3">
+                            <h4 class="form-title">Send a Message</h4>
+                        
+                            <div class="row g-4">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your full name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" name="email" placeholder="Your Email" required>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" name="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="What's this about?">
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" rows="5" placeholder="Tell me about your project..."
+                                    <label for="message">Your Message</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or idea..."
                                         required></textarea>
                                 </div>
                                 <div class="col-12">
@@ -402,7 +383,6 @@
                             </div>
                         </form>
                     </div>
-        
                 </div>
             </div>
         </section>
