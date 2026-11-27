@@ -428,6 +428,15 @@ img {
     }
 }
 
+@media (max-width: 576px) {
+  .avail-badge {
+    font-size: 0.65rem;  
+    letter-spacing: 0.8px; 
+    padding: 7px 14px;
+    gap: 8px;
+    max-width: 100%;
+  }
+}
 /* ==========================================
    SMALL MOBILE
 ========================================== */
@@ -549,6 +558,19 @@ img {
     .project-body {
         padding: 13px;
     }
+    .site-footer {
+        justify-content: center;
+        text-align: center;
+    }
+    .site-footer p {
+        margin: 0px 0px;
+    }
+    #contact {
+        padding: 0px 0 80px;
+    }
+    .contact-form {
+        margin-left: 0;
+    }
 }
 
 /* ==========================================
@@ -569,7 +591,6 @@ img {
         flex-direction: column;
         align-items: stretch;
     }
-
     .hero-buttons .btn {
         width: 100%;
     }
@@ -583,7 +604,6 @@ img {
         gap: 7px 10px;
         font-size: 10px;
     }
-
     .about-stats {
         gap: 5px;
     }
@@ -592,6 +612,13 @@ img {
     }
     .contact-form {
         margin-left: 0;
+    }
+    .site-footer {
+        justify-content: center;
+        text-align: center;
+    }
+    .site-footer p {
+        margin: 0px 0px;
     }
 }
 
